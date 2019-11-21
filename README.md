@@ -1,24 +1,25 @@
-# README
+# Molecule
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## How to start working on project
 
-Things you may want to cover:
+## Initialization
 
-* Ruby version
+Build & prepare
+```
+$ git clone git@github.com:amberaries/Molecule.git
+$ docker-compose build
+$ docker-compose run --rm runner yarn install
+$ docker-compose run --rm runner ./bin/setup
+```
 
-* System dependencies
+## Commands
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ docker-compose up rails
+$ docker-compose up rails webpacker
+```
+Run everyday tasks via runner
+```
+$ docker-compose run --rm runner
+$ docker-compose run --rm runner [<COMMAND>]
+```
