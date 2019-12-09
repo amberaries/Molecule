@@ -22,4 +22,6 @@ Run everyday tasks via runner
 ```
 $ docker-compose run --rm runner
 $ docker-compose run --rm runner [<COMMAND>]
+$ docker-compose run --rm runner bundle outdated
+$ docker-compose run --rm runner bundle update
 ```
