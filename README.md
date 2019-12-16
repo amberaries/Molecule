@@ -24,4 +24,10 @@ $ docker-compose run --rm runner
 $ docker-compose run --rm runner [<COMMAND>]
 $ docker-compose run --rm runner bundle outdated
 $ docker-compose run --rm runner bundle update
+$ docker-compose run --rm runner bundle install
+$ docker-compose run --rm runner rails db:reset
+$ docker-compose run --rm runner rails db:create
+$ docker-compose run --rm runner rails db:migrate
+$ docker-compose run --rm runner rails g controller promo index
+$ RAILS_ENV=test docker-compose run --rm runner rspec spec
 ```
