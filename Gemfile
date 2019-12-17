@@ -15,7 +15,6 @@ gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
 
 group :development, :test do
-  gem 'capybara'
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'faker'
@@ -27,4 +26,10 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'pry-rails'
   gem 'web-console', '>= 3.3.0'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'capybara-screenshot'
+  gem 'selenium-webdriver'
 end

@@ -1,10 +1,17 @@
+class ActionDispatch::Routing::Mapper
+  def draw(routes_name)
+    instance_eval(File.read(Rails.root.join("config/routes/#{routes_name}.rb")))
+  end
+end
+
 Rails.application.routes.draw do
+  draw :api
+  draw :app
+  draw :users
+
+  namespace :admin do
+    draw :admin
+  end
+
   root 'promo#index'
-
-  resources :users
-  resources :sessions, only: [:new, :create, :destroy]
-
-  get 'signup', to: 'users#new', as: 'signup'
-  get 'login', to: 'sessions#new', as: 'login'
-  get 'logout', to: 'sessions#destroy', as: 'logout'
 end
