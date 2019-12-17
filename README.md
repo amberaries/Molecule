@@ -30,4 +30,7 @@ $ docker-compose run --rm runner rails db:create
 $ docker-compose run --rm runner rails db:migrate
 $ docker-compose run --rm runner rails g controller promo index
 $ RAILS_ENV=test docker-compose run --rm runner rspec spec
+$ RAILS_ENV=test docker-compose run --rm runner rspec --format documentation
+$ RAILS_ENV=test docker-compose run --rm runner rspec --profile 2
+$ RAILS_ENV=test docker-compose run --rm runner rspec --only-failures
 ```
