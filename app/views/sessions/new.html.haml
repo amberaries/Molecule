@@ -1,0 +1,15 @@
+%p{id: "alert"}
+  = alert
+
+%h1
+  Login
+
+= form_with(url: sessions_path, local: true) do |form|
+  %div
+    = form.label :email
+    = form.text_field :email
+  %div
+    = form.label :password
+    = form.password_field :password
+  %div
+    = form.submit "Login"
