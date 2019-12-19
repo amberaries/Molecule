@@ -13,5 +13,5 @@ Rails.application.routes.draw do
     draw :admin
   end
 
-  root 'promo#index'
+  root to: 'promo#index'
 end
