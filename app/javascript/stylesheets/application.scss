@@ -1,0 +1,15 @@
+// Fonts
+@import "config/fonts";
+
+// Graphical variables
+@import "config/colors";
+
+// Vendorv
+@import "bootstrap/scss/bootstrap";
+
+// Components
+@import "components/index";
+
+// layouts
+@import "layouts/dashboard";
+@import "layouts/app";
