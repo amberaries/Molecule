@@ -1,6 +1,5 @@
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
-require("jquery")
 
 // import vendor JS
 import "bootstrap/dist/js/bootstrap";
